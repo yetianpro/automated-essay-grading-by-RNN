@@ -1,0 +1,102 @@
+<head>
+  <!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="custom.css"> -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="aes.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+          integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+          crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+          crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="custom.css">
+</head>
+
+
+<body>
+<div class="container">
+  <p class="h2">Automated Essay Grading Tool</p>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group btn-group-sm btn-group-toggle" data-toggle="buttons" id="btn-essay-type">
+          <label>Essay Type: </label>
+          <label class="btn btn-custom btn-et active">
+            <input type="radio" name="options" autocomplete="off" value="1" checked> Source Dependent Responses
+          </label>
+          <label class="btn btn-custom btn-et">
+            <input type="radio" name="options" autocomplete="off" value="0"> Persuasive/Narrative/Expository
+          </label>
+        </div>
+      </div>
+      <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group btn-group-sm btn-group-toggle" data-toggle="buttons" id="btn-grade-level">
+          <label>Grade Level: </label>
+          <label class="btn btn-custom btn-gl active">
+            <input type="radio" name="options" autocomplete="off" value="100" checked> 7
+          </label>
+          <label class="btn btn-custom btn-gl">
+            <input type="radio" name="options" autocomplete="off" value="010"> 8
+          </label>
+          <label class="btn btn-custom btn-gl">
+            <input type="radio" name="options" autocomplete="off" value="001"> 9
+          </label>
+        </div>
+      </div>
+      <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group btn-group-sm btn-group-toggle" data-toggle="buttons" id="btn-score-range">
+          <label>Output Score Range: </label>
+
+          <label class="btn btn-custom btn-sr active">
+            <input type="radio" name="options" autocomplete="off" value="1" checked> 0~1
+          </label>
+
+          <label class="btn btn-custom btn-sr">
+            <input type="radio" name="options" autocomplete="off" value="10"> 0~10
+          </label>
+          <label class="btn btn-custom btn-sr">
+            <input type="radio" name="options" autocomplete="off" value="100"> 0~100
+          </label>
+        </div>
+      </div>
+
+    </div>
+    <div class="text-center col-sm-2">
+      <div>
+        <h3>SCORE</h3>
+        <div class="little-squre-box">
+          <h3></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="form-group">
+    <br>
+    <p class="h5">Paste Your Essay Below:</p>
+    <!-- <label for="mytextarea">Paste Your Essay Below:</label> -->
+    <textarea class="form-control" id="mytextarea" rows="3"></textarea>
+    <br>
+    <button class="btn btn-secondary" type="reset" value="Refresh Page" onClick="window.location.reload()">Refresh
+    </button>
+    <button class="btn btn-primary" id="submit" type="submit">Submit</button>
+    <a href="/Users/YeTian/Documents/GeorgiaTech/cs6460-edu/Project/dataset/valid_set.xls">
+      <button class="btn btn-info">Download</button>
+    </a>
+  </div>
+
+
+</div>
+</body>
+
+
+
